@@ -22,9 +22,12 @@ var sliderItems = document.getElementById('items');
 // next = document.getElementById('next');
 var threshold = document.documentElement.clientWidth * 0.19; // Adjust as needed
 var initialPosition = -(threshold); // You can adjust this value as needed
-
+var link = "https://doris.tn/6192483906048-gloss%20matte%20velvet%2009.html";
 slide(slider, sliderItems, initialPosition);
-
+var openLink = document.getElementById("openLink");
+openLink.addEventListener("click", function () {
+  window.location.href = link;
+});
 function slide(wrapper, items, initialPosition) {
   var posX1 = 0,
     posX2 = 0,
@@ -123,35 +126,43 @@ function slide(wrapper, items, initialPosition) {
 
   function checkIndex() {
     items.classList.remove('shifting');
-    console.log(index);
+    // console.log(index);
     // if (index == -1) {
     //   items.style.left = -(slidesLength * slideSize) + "px";
     //   index = slidesLength - 1;
     // }
     if (index == -2) {
       change_lipstickColor([0.6902, 0.4353, 0.6]);
+      link = "https://doris.tn/6192483906048-gloss%20matte%20velvet%2009.html";
       shiftSlide(1)
     }
     else if (index == -1) {
       change_lipstickColor([0.0, 0.0, 1.0]);
+      link = "https://doris.tn/gloss-matte-velvet-05.html";
     }
     else if (index == 0) {
       change_lipstickColor([0.0, 0.0, 0.0]);
+      link = "https://doris.tn/gloss-matte-velvet-05.html";
     }
     else if (index == 1) {
       change_lipstickColor([0.0, 0.0, 1.0]);
+      link = "https://doris.tn/6192483906048-gloss%20matte%20velvet%2009.html";
     }
     else if (index == 2) {
       change_lipstickColor([0.0, 0.0, 0.0]);
+      link = "https://doris.tn/gloss-matte-velvet-05.html";
     }
     else if (index == 3) {
       change_lipstickColor([0.0, 0.0, 1.0]);
+      link = "https://doris.tn/6192483906048-gloss%20matte%20velvet%2009.html";
     }
     else if (index == 4) {
       change_lipstickColor([0.0, 0.0, 0.0]);
+      link = "https://doris.tn/gloss-matte-velvet-05.html";
     }
     else if (index == 5) {
       change_lipstickColor([0.6902, 0.4353, 0.6]);
+      link = "https://doris.tn/6192483906048-gloss%20matte%20velvet%2009.html";
       shiftSlide(-1)
     }
     else if (index == slidesLength) {
