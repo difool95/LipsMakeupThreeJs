@@ -20,7 +20,7 @@ const SHAPELIPS = {
     "lipsExtTop3", // 3
     "lipsExtTop4", // 4
     "lipsExtTop5", // 5
-    
+
     "lipsExt6", // 6
 
     "lipsExtBot7", // 7
@@ -28,13 +28,13 @@ const SHAPELIPS = {
     "lipsExtBot9", // 9
     "lipsExtBot10", // 10
     "lipsExtBot11", // 11
-    
+
     "lipsInt12", // 12
 
     "lipsIntTop13", // 13
     "lipsIntTop14", // 14
     "lipsIntTop15", // 15
-    
+
     "lipsInt16", // 16
 
     "lipsIntBot17", // 17
@@ -57,7 +57,7 @@ const SHAPELIPS = {
     [1], // lipsExtTop3
     [1], // lipsExtTop4
     [1], // lipsExtTop5
-    
+
     [1], // lipsExt6
 
     [1], // lipsExtBot7
@@ -65,13 +65,13 @@ const SHAPELIPS = {
     [1], // lipsExtBot9
     [1], // lipsExtBot10
     [1], // lipsExtBot11
-    
+
     [-1], // lipsInt12
 
     [-1], // lipsIntTop13
     [-1], // lipsIntTop14
     [-1], // lipsIntTop15
-    
+
     [-1], // lipsInt16
 
     [-1], // lipsIntBot17
@@ -81,30 +81,30 @@ const SHAPELIPS = {
 
   // how to group shape points to draw triangles
   // each value is an index in shape points array
-  tesselation: [ 
+  tesselation: [
     // upper lip:
-    0,1,13, // each group of 3 indices is a triangular face
-    0,12,13,
-    1,13,2,
-    2,13,14,
-    2,3,14,
-    3,4,14,
-    14,15,4,
-    4,5,15,
-    15,5,6,
-    15,6,16,
+    0, 1, 13, // each group of 3 indices is a triangular face
+    0, 12, 13,
+    1, 13, 2,
+    2, 13, 14,
+    2, 3, 14,
+    3, 4, 14,
+    14, 15, 4,
+    4, 5, 15,
+    15, 5, 6,
+    15, 6, 16,
 
     // lower lip:
-    0,12,19,
-    0,19,11,
-    11,10,19,
-    10,18,19,
-    10,9,18,
-    8,9,18,
-    8,17,18,
-    7,8,17,
-    6,7,17,
-    6,17,16 //*/
+    0, 12, 19,
+    0, 19, 11,
+    11, 10, 19,
+    10, 18, 19,
+    10, 9, 18,
+    8, 9, 18,
+    8, 17, 18,
+    7, 8, 17,
+    6, 7, 17,
+    6, 17, 16 //*/
   ],
 
   // interpolated points:
@@ -155,7 +155,7 @@ const SHAPELIPS = {
     { // upper lip. Indices of points in points array:
       points: [
         0,
-        1,2,3,4,5, // exterior
+        1, 2, 3, 4, 5, // exterior
         6, 16,
         15, 14, 13, // interior
         12
@@ -189,7 +189,7 @@ const SHAPELIPS = {
   // RENDERING:
   // GLSLFragmentSource is the GLSL source code of the shader used
   // to fill the shape:
-  
+
   // Debug interpolated vals:
   /*GLSLFragmentSource: "void main(void){\n\
     gl_FragColor = vec4(0.5 + 0.5*iVal, 0., 1.);\n\
@@ -199,7 +199,7 @@ const SHAPELIPS = {
   /*GLSLFragmentSource: "void main(void){\n\
     gl_FragColor = vec4(0.1, 0.0, 0.2, 0.5);\n\
   }" //*/
-  
+
   // debug samplerVideo and vUV:
   /*GLSLFragmentSource: "void main(void){\n\
     gl_FragColor = vec4(0., 1., 0., 1.) * texture2D(samplerVideo, vUV);\n\
@@ -236,33 +236,33 @@ const SHAPELIPS = {
       //gl_FragColor = vec4(alpha, alpha, alphaClamped, 1.0);\n\
       //gl_FragColor = vec4(0., 1., 0., 1.);\n\
     }",
-    uniforms: [{
-      name: 'lipstickColor',
-      value: [0.6902, 0.4353, 0.6]
-    }]
+  uniforms: [{
+    name: 'lipstickColor',
+    value: [0.6902, 0.4353, 0.6]
+  }]
 }; //end SHAPELIPS
 
-function start(){
+function start() {
   WebARRocksFaceShape2DHelper.init({
     NNCPath: '../../neuralNets/NN_LIPS_8.json',
     canvasVideo: _canvasVideo,
-    canvasAR:_canvasAR,
-    shapes: [ SHAPELIPS ]
-   // ,videoURL: '../../../../testVideos/1032526922-hd.mov'
+    canvasAR: _canvasAR,
+    shapes: [SHAPELIPS]
+    // ,videoURL: '../../../../testVideos/1032526922-hd.mov'
     //,videoURL: '../../../../testVideos/1057538806-hd.mp4'
-  }).then(function(){
+  }).then(function () {
 
-  }).catch(function(err){
+  }).catch(function (err) {
     throw new Error(err);
   });
 }
 
 
 // entry point:
-function main(){
+function main() {
   _canvasAR = document.getElementById('WebARRocksFaceCanvasAR');
   _canvasVideo = document.getElementById('WebARRocksFaceCanvasVideo');
-  
+
   _selectedDOMColorButton = document.getElementById('colorRed');
 
   WebARRocksResizer.size_canvas({
@@ -274,11 +274,11 @@ function main(){
 }
 
 
-function change_lipstickColor(color, event){
-  _selectedDOMColorButton.classList.remove('controlButtonSelected');
-  const domLink = event.target;
-  domLink.classList.add('controlButtonSelected');
-  _selectedDOMColorButton = domLink;
+function change_lipstickColor(color) {//, event){
+  // _selectedDOMColorButton.classList.remove('controlButtonSelected');
+  // const domLink = event.target;
+  // domLink.classList.add('controlButtonSelected');
+  // _selectedDOMColorButton = domLink;
   WebARRocksFaceShape2DHelper.set_uniformValue('LIPS', 'lipstickColor', color);
 }
 

@@ -1,87 +1,95 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="content-language" content="en-EN" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 
-    <title>WebAR.rocks.face lipstick demo</title>
-    
-    <!-- INCLUDE WebAR.rocks.face MAIN SCRIPT -->
-    <script src="./dist/WebARRocksFace.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-language" content="en-EN" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, orientation=portrait">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>WebAR.rocks.face lipstick demo</title>
 
-    <!-- INCLUDE MAIN HELPER -->
-    <script src="./helpers/WebARRocksFaceShape2DHelper.js"></script>
+  <!-- INCLUDE WebAR.rocks.face MAIN SCRIPT -->
+  <script src="./dist/WebARRocksFace.js"></script>
 
-    <!-- INCLUDE RESIZER HELPER -->
-    <script src="./helpers/WebARRocksResizer.js"></script>
+  <!-- INCLUDE MAIN HELPER -->
+  <script src="./helpers/WebARRocksFaceShape2DHelper.js"></script>
 
-    <!-- INCLUDE LANDMARKS STABILIZER -->
-    <script src="./helpers/landmarksStabilizers/WebARRocksLMStabilizer2.js"></script>
-    
-    <!-- INCLUDE DEMO SCRIPT -->
-    <script src="./main.js"></script>
+  <!-- INCLUDE RESIZER HELPER -->
+  <script src="./helpers/WebARRocksResizer.js"></script>
 
-    <style type="text/css">
-      body {
+  <!-- INCLUDE LANDMARKS STABILIZER -->
+  <script src="./helpers/landmarksStabilizers/WebARRocksLMStabilizer2.js"></script>
+
+  <!-- INCLUDE DEMO SCRIPT -->
+  <script src="./main.js"></script>
+
+  <style type="text/css">
+    /* body {
         margin: 0;
         overflow: hidden;
-      }
+      } */
 
-      #WebARRocksFaceCanvasAR, #WebARRocksFaceCanvasVideo {
-        position: fixed;
-        width: 100vw;
-        top: 0;
-        left: 0;
-        /* mirror the canvas: */
-        transform: rotateY(180deg);
-      }
+    #WebARRocksFaceCanvasAR,
+    #WebARRocksFaceCanvasVideo {
+      position: fixed;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      /* mirror the canvas: */
+      transform: rotateY(180deg);
+    }
 
-      #WebARRocksFaceCanvasVideo {
-        z-index: 0;
-      }
-      #WebARRocksFaceCanvasAR {
-        z-index: 1;
-      }
+    #WebARRocksFaceCanvasVideo {
+      z-index: 0;
+    }
 
-      .controls {
-        position: fixed;
-        bottom: 0;
-        z-index: 2;
-        width: 100vw;
-        min-height: 96px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-      }
+    #WebARRocksFaceCanvasAR {
+      z-index: 1;
+    }
 
-      .controlButton {
-        margin-left: 16px;
-        margin-right: 16px;
-        height: 80px;
-        width: 80px;
-        border-radius: 50%;
-        cursor: pointer;
-        transition-duration: 500ms;
-        user-select: none;
-      }
+    .controls {
+      position: fixed;
+      bottom: 0;
+      z-index: 2;
+      width: 100vw;
+      min-height: 96px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
 
-      #colorRed {
-        background-color: #b06f99;        
-      }
-      #colorBlue {
-        background-color: #5555ff;
-      }
-      #colorYellow {
-        background-color: #333333;
-      }
-      .controlButtonSelected {
-        transform: scale(1.2, 1.2);
-      }
-    </style>
+    .controlButton {
+      margin-left: 16px;
+      margin-right: 16px;
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition-duration: 500ms;
+      user-select: none;
+    }
 
-  </head>
-  <body>
+    #colorRed {
+      background-color: #b06f99;
+    }
+
+    #colorBlue {
+      background-color: #5555ff;
+    }
+
+    #colorYellow {
+      background-color: #333333;
+    }
+
+    .controlButtonSelected {
+      transform: scale(1.2, 1.2);
+    }
+  </style>
+
+</head>
+<!-- <body>
     <canvas width="600" height="600" id='WebARRocksFaceCanvasAR'></canvas>
     <canvas width="600" height="600" id='WebARRocksFaceCanvasVideo'></canvas>
     <controls class='controls'>
@@ -89,6 +97,46 @@
       <a class='controlButton' id='colorBlue' onclick='change_lipstickColor([0.0, 0.0, 1.0], event)'></a>
       <a class='controlButton' id='colorYellow' onclick='change_lipstickColor([0.0, 0.0, 0.0], event)'></a>
     </controls>
-  </body>
+  </body> -->
+
+<body class="white-preview">
+  <canvas width="600" height="600" id='WebARRocksFaceCanvasAR'></canvas>
+  <canvas width="600" height="600" id='WebARRocksFaceCanvasVideo'></canvas>
+  <div class="btn-container">
+    <!-- <i class="fa fa-sun-o" aria-hidden="true"></i> -->
+    <label class="switch btn-color-mode-switch">
+      <input type="checkbox" name="color_mode" id="color_mode" value="1">
+      <label for="color_mode" data-on="Gossy" data-off="Matte" class="btn-color-mode-switch-inner"></label>
+    </label>
+    <!-- <i class="fa fa-moon-o" aria-hidden="true"></i> -->
+    <!-- <p class="by"><a href="https://github.com/NadeeshaEranjan" target="_blank">Github/NadeeshaEranjan</a></p> -->
+  </div>
+  <div class="button-container">
+    <a href="#" class="top-left-button">
+      <img src="back.png" alt="Top Left Button">
+    </a>
+    <a href="#" class="right-center-button">
+      <img src="go.png" alt="Top Left Button" style="width: 13vw; height: 13vw">
+    </a>
+
+    <div id="slider" class="slider">
+      <div class="wrapper">
+        <div id="items" class="items">
+          <img src="EllipseNormal.png" alt="Image 1" class="slide">
+          <img src="EllipseNormal.png" alt="Image 2" class="slide">
+          <img src="EllipseNormal.png" alt="Image 3" class="slide">
+          <img src="EllipseNormal.png" alt="Image 4" class="slide">
+          <img src="EllipseNormal.png" alt="Image 5" class="slide">
+          <img src="EllipseNormal.png" alt="Image 6" class="slide">
+          <!-- Add more image elements for additional slides -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
 </html>
- 
