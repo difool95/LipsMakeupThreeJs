@@ -823,10 +823,10 @@ const SHAPEFACE = {
     id: 'color',
     src: 'assets/makeup2.png'
   }],
-  // uniforms: [{
-  //   name: 'color',
-  //   value: "assets/makeup2.png"
-  // }]
+  uniforms: [{
+    name: 'color',
+    value: "assets/makeup2.png"
+  }]
 }; // END SHAPEFACE
 
 // function start() {
