@@ -823,10 +823,10 @@ const SHAPEFACE = {
     id: 'color',
     src: 'assets/makeup2.png'
   }],
-  uniforms: [{
-    name: 'color',
-    value: "assets/makeup2.png"
-  }]
+  // uniforms: [{
+  //   name: 'color',
+  //   value: "assets/makeup2.png"
+  // }]
 }; // END SHAPEFACE
 
 // function start() {
@@ -897,7 +897,7 @@ function change_lipstickColor(color) {//, event){
 
 function change_lipstickTexture(imageName) {
   // mainTexture(imageName);
-  WebARRocksFaceShape2DHelper.set_uniformValue('LIPS', 'color', "assets/" + imageName);
+  // WebARRocksFaceShape2DHelper.set_uniformValue('LIPS', 'color', "assets/" + imageName);
 
 }
 
