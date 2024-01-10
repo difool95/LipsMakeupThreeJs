@@ -9,13 +9,13 @@ function colorModePreview(ele) {
     // $('body').addClass('dark-preview');
     // $('body').removeClass('white-preview');
     console.log("glossy");
-    startTexture();
+    // startTexture();
   }
   else if ($(ele).prop("checked") == false) {
     // $('body').addClass('white-preview');
     // $('body').removeClass('dark-preview');
     console.log("Matte");
-    start();
+    // start();
   }
 }
 var slider = document.getElementById('slider');
@@ -134,7 +134,7 @@ function slide(wrapper, items, initialPosition) {
     //   index = slidesLength - 1;
     // }
     if (index == -2) {
-      // change_lipstickColor([0.6902, 0.4353, 0.6]);
+      change_lipstickColor([0.6902, 0.4353, 0.6]);
       change_lipstickTexture("makeup1.png");
       link = "https://doris.tn/6192483906048-gloss%20matte%20velvet%2009.html";
       shiftSlide(1)
@@ -145,7 +145,7 @@ function slide(wrapper, items, initialPosition) {
       link = "https://doris.tn/gloss-matte-velvet-05.html";
     }
     else if (index == 0) {
-      change_lipstickTexture("makeup3.png");
+      // change_lipstickTexture("makeup3.png");
       // change_lipstickColor([0.0, 0.0, 0.0]);
       link = "https://doris.tn/gloss-matte-velvet-05.html";
     }
