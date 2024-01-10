@@ -1,0 +1,11 @@
+{
+	"applinks":{
+		"aaps":[],
+			"details": [
+				 {
+				 	"appID": "ABCD.com.mouvmnt.doris",
+				 	"paths": ["/app.html", "/app.html/*", "/app", "/app/*"]
+				 }
+			]
+	}
+}

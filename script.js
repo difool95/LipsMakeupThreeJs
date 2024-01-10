@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $("#color_mode").on("change", function () {
-    // colorModePreview(this);
+    colorModePreview(this);
   })
 });
 
@@ -9,11 +9,13 @@ function colorModePreview(ele) {
     // $('body').addClass('dark-preview');
     // $('body').removeClass('white-preview');
     console.log("glossy");
+    mainTexture();
   }
   else if ($(ele).prop("checked") == false) {
     // $('body').addClass('white-preview');
     // $('body').removeClass('dark-preview');
     console.log("Matte");
+    main();
   }
 }
 var slider = document.getElementById('slider');

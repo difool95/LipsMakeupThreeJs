@@ -1,166 +1,173 @@
-html, body{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-/*    background-image: url('bg.png'); */
-    overflow: hidden;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    letter-spacing: 0.15em;
-} 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  /*    background-image: url('bg.png'); */
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  letter-spacing: 0.15em;
+}
 
-body{
-    display: table;
+body {
+  display: table;
 }
 
 /*switch styles*/
 
-div.btn-container{
-/*    display: table-cell;*/
-    vertical-align: middle;
-    text-align: center;
+div.btn-container {
+  /*    display: table-cell;*/
+  vertical-align: middle;
+  text-align: center;
 }
 
-div.btn-container i{
-    display: inline-block;
-    position: relative;
-/*    top: -9px;*/
+div.btn-container i {
+  display: inline-block;
+  position: relative;
+  /*    top: -9px;*/
 }
 
 label {
-    font-size: 14px;
-    color: #fefefe;
-    font-weight: 500;
-/*    top: 10px;*/
+  font-size: 14px;
+  color: #fefefe;
+  font-weight: 500;
+  /*    top: 10px;*/
 }
 
-.btn-color-mode-switch{
-    display: inline-block;
-    margin: 0px;
-    position: relative;
-    top: 8vh;
+.btn-color-mode-switch {
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+  top: 8vh;
 }
 
-.btn-color-mode-switch > label.btn-color-mode-switch-inner{
-    margin: 0px;
-    width: 55vw;
-    height: 4vh;
-    background: rgba(232, 232, 232, 0.2);
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    transition: all 0.3s ease;
-    /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
-    display: flex;
-    align-items: center;
+.btn-color-mode-switch>label.btn-color-mode-switch-inner {
+  margin: 0px;
+  width: 55vw;
+  height: 4vh;
+  background: rgba(232, 232, 232, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
+  display: flex;
+  align-items: center;
 }
 
-.btn-color-mode-switch > label.btn-color-mode-switch-inner:before{
-    content: attr(data-on);
-    position: absolute;
-    font-size: 14px;
-    color: #fefefe;
-    font-weight: 500;
-/*    top: 7px;*/
-    right: 18%;
+.btn-color-mode-switch>label.btn-color-mode-switch-inner:before {
+  content: attr(data-on);
+  position: absolute;
+  font-size: 14px;
+  color: #fefefe;
+  font-weight: 500;
+  /*    top: 7px;*/
+  right: 18%;
 
 }
 
-.btn-color-mode-switch > label.btn-color-mode-switch-inner:after{
-    content: attr(data-off);
-    width: 50%;
-/*    height: 100%;*/
-    background: rgba(232, 232, 232, 0.3);
-    border-radius: 22px;
-    position: absolute;
-    left: 2px;
-    padding-bottom: 7px;
-    padding-top: 7px;
-    text-align: center;
-    transition: all 0.3s ease;
-/*    box-shadow: 0px 0px 6px -2px #111;*/
+.btn-color-mode-switch>label.btn-color-mode-switch-inner:after {
+  content: attr(data-off);
+  width: 50%;
+  /*    height: 100%;*/
+  background: rgba(232, 232, 232, 0.3);
+  border-radius: 22px;
+  position: absolute;
+  left: 2px;
+  padding-bottom: 7px;
+  padding-top: 7px;
+  text-align: center;
+  transition: all 0.3s ease;
+  /*    box-shadow: 0px 0px 6px -2px #111;*/
 }
 
-.btn-color-mode-switch input[type="checkbox"]{
-    cursor: pointer;
-/*    width: 50px;*/
-    height: 25px;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    margin: 0px;
+.btn-color-mode-switch input[type="checkbox"] {
+  cursor: pointer;
+  /*    width: 50px;*/
+  height: 25px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  margin: 0px;
 }
 
-.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after{
-    content: attr(data-on);
-    left: 49%;
-    background: rgba(232, 232, 232, 0.3);
+.btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner:after {
+  content: attr(data-on);
+  left: 49%;
+  background: rgba(232, 232, 232, 0.3);
 }
 
-.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before{
-    content: attr(data-off);
-    right: auto;
-    left: 20%;
+.btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner:before {
+  content: attr(data-off);
+  right: auto;
+  left: 20%;
 }
 
-.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
-    /*background: #66BB6A; */
-    /*color: #fff;*/
+.btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner {
+  /*background: #66BB6A; */
+  /*color: #fff;*/
 }
 
-.btn-color-mode-switch input[type="checkbox"]:checked ~ .alert{
-    display: block;
-}
-
-
-p.by {
-    
-}
-
-p.by a{
-    text-decoration: none;
-    color: #fefefe;
+.btn-color-mode-switch input[type="checkbox"]:checked~.alert {
+  display: block;
 }
 
 
- .button-container {
-            position: initial;
-            width: 100%; /* Adjust the container width */
-            height: 100%; /* Adjust the container height */
-        }
+p.by {}
 
-        .top-left-button {
-            position: absolute;
-            top: 8.6vh;
-            left: 16px;
-        }
+p.by a {
+  text-decoration: none;
+  color: #fefefe;
+}
+
+
+.button-container {
+  position: initial;
+  width: 100%;
+  /* Adjust the container width */
+  height: 100%;
+  /* Adjust the container height */
+}
+
+.top-left-button {
+  position: absolute;
+  top: 8.6vh;
+  left: 16px;
+}
 
 
 .top-left-button img {
-    width: 60%; /* Adjust the width as per your preference */
-    height: 60%; /* Adjust the height as per your preference */
+  width: 60%;
+  /* Adjust the width as per your preference */
+  height: 60%;
+  /* Adjust the height as per your preference */
 }
-        .right-center-button {
-            position: absolute;
-            top: 50%;
-            right: 16px;
-/*            transform: translateY(-50%);*/
-        }
 
-        .right-center-button {
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-        }
+.right-center-button {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  /*            transform: translateY(-50%);*/
+}
 
-        .right-center-button img {
-/*            width: 50px; /* Adjust the width as per your preference */*/
-/*            height: 50px; /* Adjust the height as per your preference */*/
-        }
+.right-center-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
 
- @import url("https://fonts.googleapis.com/css?family=Montserrat");
+.right-center-button img {
+  /*            width: 50px; /* Adjust the width as per your preference */
+  */
+  /*            height: 50px; /* Adjust the height as per your preference */
+  */
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
 * {
   box-sizing: border-box;
 }
@@ -168,27 +175,27 @@ p.by a{
 .slider {
   position: absolute;
   bottom: 8vh;
-/*  transform: translate(-50%, -50%);*/
+  /*  transform: translate(-50%, -50%);*/
   width: 60%;
   height: 100px;
-/*  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);*/
-right: 20vw;
+  /*  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);*/
+  right: 20vw;
 }
 
 
 .wrapper {
   overflow: hidden;
   position: relative;
-/*  background: #222;*/
+  /*  background: #222;*/
   z-index: 1;
 }
 
 #items {
   width: 10000px;
-  position: relative;v
-  top: 0;
+  position: relative;
+  v top: 0;
   left: -400px;
-/*  padding-top: 100px;*/
+  /*  padding-top: 100px;*/
 }
 
 #items.shifting {
@@ -196,8 +203,10 @@ right: 20vw;
 }
 
 .slide {
-  width: 13vw; /* Adjust the width as needed */
-  height: 13vw; /* Adjust the height as needed */
+  width: 13vw;
+  /* Adjust the width as needed */
+  height: 13vw;
+  /* Adjust the height as needed */
   cursor: pointer;
   float: left;
   display: flex;
@@ -205,18 +214,23 @@ right: 20vw;
   justify-content: center;
   transition: all 1s;
   position: relative;
-  background: none; /* Remove background color */
-  margin-right: 6vw; /* Add margin to create space between items */
+  background: none;
+  /* Remove background color */
+  margin-right: 6vw;
+  /* Add margin to create space between items */
 }
 
 .slide:last-child {
-  margin-right: 0; /* Remove margin from the last item to prevent extra space */
+  margin-right: 0;
+  /* Remove margin from the last item to prevent extra space */
 }
 
 .slide img {
-  width: 100%; /* Ensure the image covers the entire slide */
+  width: 100%;
+  /* Ensure the image covers the entire slide */
   height: 100%;
-  object-fit: cover; /* Adjust the object-fit property as needed */
+  object-fit: cover;
+  /* Adjust the object-fit property as needed */
   color: blue;
 }
 
@@ -229,7 +243,7 @@ right: 20vw;
   background: #fff;
   border-radius: 20px;
   margin-top: -20px;
-/*  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);*/
+  /*  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);*/
   z-index: 2;
 }
 
