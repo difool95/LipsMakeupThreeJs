@@ -850,6 +850,7 @@ const WebARRocksFaceShape2DHelper = (function () {
     },
 
     set_textureValue(shapeName) {
+      console.log(_shapesByName);
       // Identify the shape you want to update (e.g., by its name or index in the shapes array).
       const shapeToUpdate = _shapesByName[shapeName]; // Replace 'YourShapeName' with the actual shape name.
       console.log(shapeToUpdate);
