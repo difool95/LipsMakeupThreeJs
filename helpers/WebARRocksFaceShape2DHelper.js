@@ -849,23 +849,8 @@ const WebARRocksFaceShape2DHelper = (function () {
       shapeUniforms[uniformName].value = value;
     },
 
-    set_textureValue(shapeName) {
+    updateShape(newShape, shapeName) {
       console.log(_shapesByName);
-      // Identify the shape you want to update (e.g., by its name or index in the shapes array).
-      const shapeToUpdate = _shapesByName[shapeName]; // Replace 'YourShapeName' with the actual shape name.
-      console.log(shapeToUpdate);
-      // console.log(shapeToUpdate.uniformsByName);
-      // Check if the shape exists.
-      if (shapeToUpdate) {
-        // Change the texture source image for the first texture in the textures array.
-        // You can replace 'newTextureSource.jpg' with the path to your new image.
-        console.log(shapeToUpdate.textures[0]);
-        // shapeToUpdate.textures[0].src = 'newTextureSource.jpg';
-
-        // You may also need to update the texture on the GPU if necessary.
-        // You can add a function to handle that as well.
-        // updateTextureOnGPU(shapeToUpdate.textures[0]);
-      }
     },
 
     change_NN: function (spec) {

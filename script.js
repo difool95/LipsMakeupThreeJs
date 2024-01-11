@@ -10,7 +10,6 @@ function colorModePreview(ele) {
     // $('body').removeClass('white-preview');
     console.log("glossy");
     // startTexture();
-    change_lipstickTexture("zz.png");
   }
   else if ($(ele).prop("checked") == false) {
     // $('body').addClass('white-preview');
@@ -135,42 +134,42 @@ function slide(wrapper, items, initialPosition) {
     //   index = slidesLength - 1;
     // }
     if (index == -2) {
-      change_lipstickColor([0.6902, 0.4353, 0.6]);
-      // change_lipstickTexture("makeup1.png");
+      // change_lipstickColor([0.6902, 0.4353, 0.6]);
+      change_lipstickTexture("makeup1.png");
       link = "https://doris.tn/6192483906048-gloss%20matte%20velvet%2009.html";
       shiftSlide(1)
     }
     else if (index == -1) {
-      change_lipstickColor([0.0, 0.0, 1.0]);
-      // change_lipstickTexture("makeup2.png");
+      // change_lipstickColor([0.0, 0.0, 1.0]);
+      change_lipstickTexture("makeup2.png");
       link = "https://doris.tn/gloss-matte-velvet-05.html";
     }
     else if (index == 0) {
       link = "https://doris.tn/gloss-matte-velvet-05.html";
     }
     else if (index == 1) {
-      // change_lipstickTexture("makeup4.png");
-      change_lipstickColor([0.0, 0.0, 1.0]);
+      change_lipstickTexture("makeup4.png");
+      // change_lipstickColor([0.0, 0.0, 1.0]);
       link = "https://doris.tn/6192483906048-gloss%20matte%20velvet%2009.html";
     }
     else if (index == 2) {
-      // change_lipstickTexture("makeup1.png");
-      change_lipstickColor([0.0, 0.0, 0.0]);
+      change_lipstickTexture("makeup1.png");
+      // change_lipstickColor([0.0, 0.0, 0.0]);
       link = "https://doris.tn/gloss-matte-velvet-05.html";
     }
     else if (index == 3) {
-      // change_lipstickTexture("makeup2.png");
-      change_lipstickColor([0.0, 0.0, 1.0]);
+      change_lipstickTexture("makeup2.png");
+      // change_lipstickColor([0.0, 0.0, 1.0]);
       link = "https://doris.tn/6192483906048-gloss%20matte%20velvet%2009.html";
     }
     else if (index == 4) {
-      // change_lipstickTexture("makeup3.png");
-      change_lipstickColor([0.0, 0.0, 0.0]);
+      change_lipstickTexture("makeup3.png");
+      // change_lipstickColor([0.0, 0.0, 0.0]);
       link = "https://doris.tn/gloss-matte-velvet-05.html";
     }
     else if (index == 5) {
-      // change_lipstickTexture("makeup4.png");
-      change_lipstickColor([0.6902, 0.4353, 0.6]);
+      change_lipstickTexture("makeup4.png");
+      // change_lipstickColor([0.6902, 0.4353, 0.6]);
       link = "https://doris.tn/6192483906048-gloss%20matte%20velvet%2009.html";
       shiftSlide(-1)
     }

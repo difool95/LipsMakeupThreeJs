@@ -858,16 +858,16 @@ function startTexture() {
   });
 }
 
-function change_NN() {
-  WebARRocksFaceShape2DHelper.change_NN({
-    NNCPath: './neuralNets/NN_LIPS_8.json',
-    canvasVideo: _canvasVideo,
-    canvasAR: _canvasAR,
-    shapes: [SHAPELIPS]
-  }).then(function () {
-    console.log("NN Changed");
-  });
-}
+// function change_NN() {
+//   WebARRocksFaceShape2DHelper.change_NN({
+//     NNCPath: './neuralNets/NN_LIPS_8.json',
+//     canvasVideo: _canvasVideo,
+//     canvasAR: _canvasAR,
+//     shapes: [SHAPELIPS]
+//   }).then(function () {
+//     console.log("NN Changed");
+//   });
+// }
 
 
 // entry point:
@@ -908,9 +908,10 @@ function change_lipstickColor(color) {//, event){
 
 function change_lipstickTexture(imageName) {
   // mainTexture(imageName);
-  // WebARRocksFaceShape2DHelper.set_textureValue('TEXT');
-  change_NN();
+  console.log(SHAPEFACE);
+  console.log(SHAPEFACE.textures);
+  WebARRocksFaceShape2DHelper.updateShape(SHAPEFACE, 'TEXT');
 }
 
 
-window.addEventListener('load', main);
+window.addEventListener('load', mainTexture);
