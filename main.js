@@ -913,4 +913,4 @@ function change_lipstickTexture(imageName) {
 }
 
 
-window.addEventListener('load', mainTexture);
+window.addEventListener('load', main);
