@@ -843,8 +843,6 @@ const WebARRocksFaceShape2DHelper = (function () {
     }, //end init()
 
     set_uniformValue(shapeName, uniformName, value) {
-      console.log(_shapesByName);
-      console.log(_shapesByName[shapeName]);
       const shapeUniforms = _shapesByName[shapeName].uniformsByName;
       shapeUniforms[uniformName].value = value;
     },
