@@ -903,8 +903,8 @@ function change_lipstickColor(color) {//, event){
 
 function change_lipstickTexture(imageName) {
   // mainTexture(imageName);
-  WebARRocksFaceShape2DHelper.set_textureValue('TEXT');
-
+  // WebARRocksFaceShape2DHelper.set_textureValue('TEXT');
+  change_NN();
 }
 
 
