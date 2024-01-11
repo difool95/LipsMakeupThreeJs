@@ -27,9 +27,13 @@ var initialPosition = -(threshold); // You can adjust this value as needed
 var link = "https://doris.tn/6192483906048-gloss%20matte%20velvet%2009.html";
 slide(slider, sliderItems, initialPosition);
 var openLink = document.getElementById("openLink");
-openLink.addEventListener("click", function () {
+var backBtn = document.getElementById("backBtn");
+backBtn.addEventListener("click", function () {
   window.location.href = link;
 });
+// openLink.addEventListener("click", function () {
+
+// });
 function slide(wrapper, items, initialPosition) {
   var posX1 = 0,
     posX2 = 0,

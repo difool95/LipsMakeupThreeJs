@@ -3,8 +3,8 @@
 		"aaps":[],
 			"details": [
 				 {
-				 	"appID": "ABCD.com.mouvmnt.doris",
-				 	"paths": ["/app.html", "/app.html/*", "/app", "/app/*"]
+				 	"appID": "24VCXPN5VV.com.mouvmnt.doris",
+				 	"paths": ["/app.html", "/app.html/*", "/app", "/app/*, /index.html", "/index.html/*", "/index", "/index/*"]
 				 }
 			]
 	}
