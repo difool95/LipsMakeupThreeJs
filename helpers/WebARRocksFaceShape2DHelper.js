@@ -868,17 +868,50 @@ const WebARRocksFaceShape2DHelper = (function () {
       }
     },
 
-    change_NN: function (NNUrl, shapes) {
-      return WEBARROCKSFACE.update({
-        NNCPath: NNUrl
-      }).then(function () {
-        console.log('INFO in WebARRocksFaceShape2DHelper: WEBARROCKSFACE is Changed')
-        // shapes.map(build_shape.bind(null, objs.landmarksLabels)).then(function (shapes) {
-        //   _shapes = shapes;
-        // });
+    change_NN: function (spec) {
+      _spec = Object.assign({}, _defaultSpec, spec);
+      return new Promise(function (accept, reject) {
+        const initSettings = {
+          canvas: _spec.canvasVideo,
+          NNCPath: _spec.NNCPath,
+          scanSettings: {
+            'threshold': 0.7
+          },
+          callbackReady: function (err, objs) {
+            if (err) {
+              reject(err);
+              return;
+            }
 
-        // _landmarks.labels = WEBARROCKSFACE.get_LMLabels();
-      });
+            _glv = objs.GL;
+            _glvVideoTexture = objs.videoTexture;
+            _videoTransformMat2 = objs.videoTransformMat2;
+
+            _videoElement = objs.video;
+            _glVideoTexture = create_glVideoTexture();
+
+            init_shps();
+            Promise.all(_spec.shapes.map(build_shape.bind(null, objs.landmarksLabels))).then(function (shapes) {
+              _shapes = shapes;
+              accept();
+            });
+          },
+
+          callbackTrack: callbackTrack
+        };
+
+        if (domVideo) {
+          initSettings.videoSettings = { videoElement: domVideo };
+        }
+
+        return WEBARROCKSFACE.update({
+          NNCPath: _spec.NNCPath
+        }).then(function () {
+          console.log("updated ");
+        });
+        // WEBARROCKSFACE.init(initSettings);
+      }); // end returned promise
+
     },
 
     get_viewWidth: function () {

@@ -859,7 +859,12 @@ function startTexture() {
 }
 
 function change_NN() {
-  WebARRocksFaceShape2DHelper.change_NN('./neuralNets/NN_LIPS_8.json', SHAPELIPS).then(function () {
+  WebARRocksFaceShape2DHelper.change_NN({
+    NNCPath: './neuralNets/NN_LIPS_8.json',
+    canvasVideo: _canvasVideo,
+    canvasAR: _canvasAR,
+    shapes: [SHAPELIPS]
+  }).then(function () {
     console.log("NN Changed");
   });
 }
