@@ -146,7 +146,7 @@ function slide(wrapper, items, initialPosition) {
     }
     else if (index == 0) {
       // change_lipstickTexture("makeup3.png");
-      change_lipstickColor([0.0, 0.0, 0.0]);
+      // change_lipstickColor([0.0, 0.0, 0.0]);
       link = "https://doris.tn/gloss-matte-velvet-05.html";
     }
     else if (index == 1) {
