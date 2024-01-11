@@ -10,6 +10,7 @@ function colorModePreview(ele) {
     // $('body').removeClass('white-preview');
     console.log("glossy");
     // startTexture();
+    change_lipstickTexture("zz.png");
   }
   else if ($(ele).prop("checked") == false) {
     // $('body').addClass('white-preview');
