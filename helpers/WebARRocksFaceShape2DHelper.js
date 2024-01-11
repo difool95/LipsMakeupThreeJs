@@ -868,6 +868,19 @@ const WebARRocksFaceShape2DHelper = (function () {
       }
     },
 
+    change_NN: function (NNUrl, shapes) {
+      return WEBARROCKSFACE.update({
+        NNCPath: NNUrl
+      }).then(function () {
+        console.log('INFO in WebARRocksFaceShape2DHelper: WEBARROCKSFACE is Changed')
+        // shapes.map(build_shape.bind(null, objs.landmarksLabels)).then(function (shapes) {
+        //   _shapes = shapes;
+        // });
+
+        // _landmarks.labels = WEBARROCKSFACE.get_LMLabels();
+      });
+    },
+
     get_viewWidth: function () {
       return _spec.canvasVideo.width;
     },
