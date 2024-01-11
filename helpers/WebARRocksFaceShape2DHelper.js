@@ -900,9 +900,9 @@ const WebARRocksFaceShape2DHelper = (function () {
           callbackTrack: callbackTrack
         };
 
-        if (domVideo) {
-          initSettings.videoSettings = { videoElement: domVideo };
-        }
+        // if (domVideo) {
+        //   initSettings.videoSettings = { videoElement: domVideo };
+        // }
 
         return WEBARROCKSFACE.update({
           NNCPath: _spec.NNCPath
