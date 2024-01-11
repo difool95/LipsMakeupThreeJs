@@ -254,7 +254,7 @@ const SHAPEFACE = {
   // each point is given as its label
   // the label depends on the used neural network
   // run WEBARROCKSFACE.get_LMLabels() to get all labels
-  name: 'LIPS',
+  name: 'TEXT',
   points: [
     // LIPS:
     "lipsExt0", // 0
@@ -823,10 +823,10 @@ const SHAPEFACE = {
     id: 'color',
     src: 'assets/makeup2.png'
   }],
-  uniforms: [{
-    name: 'color',
-    value: "assets/makeup2.png"
-  }]
+  // uniforms: [{
+  //   name: 'color', //ERROR WHEN USED
+  //   value: "assets/makeup2.png"
+  // }]
 }; // END SHAPEFACE
 
 // function start() {
@@ -897,7 +897,7 @@ function change_lipstickColor(color) {//, event){
 
 function change_lipstickTexture(imageName) {
   // mainTexture(imageName);
-  WebARRocksFaceShape2DHelper.set_uniformValue('LIPS', 'color', "assets/" + imageName);
+  WebARRocksFaceShape2DHelper.set_textureValue('TEXT');
 
 }
 
