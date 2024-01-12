@@ -256,7 +256,7 @@ const WebARRocksFaceShape2DHelper = (function () {
         + GLSLUniforms.join('\n') + '\n'
         + 'varying vec2 vUV;\n'
         + 'uniform sampler2D samplerVideo;\n'
-        + 'uniform sampler2D glossinessMap; \n\''
+        // + 'uniform sampler2D glossinessMap; \n\''
         + shapeSpecs.GLSLFragmentSource;
       const shp = build_shaderProgram(_gl, vertexShaderSource, fragmentShaderSource, 'SHAPE_' + shapeIndex.toString());
 
@@ -267,7 +267,7 @@ const WebARRocksFaceShape2DHelper = (function () {
       }
       shp.uniforms.samplerVideo = _gl.getUniformLocation(shp.program, "samplerVideo");
       shp.uniforms.videoUVScale = _gl.getUniformLocation(shp.program, "videoUVScale");
-      shp.uniforms.glossinessMap = gl.getUniformLocation(shp.program, 'glossinessMap');
+      // shp.uniforms.glossinessMap = gl.getUniformLocation(shp.program, 'glossinessMap');
 
       shp.uniforms.texturesSamplers = shapeSpecs.textures.map(function (textureSpec) {
         return _gl.getUniformLocation(shp.program, textureSpec.id);
