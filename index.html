@@ -84,20 +84,11 @@
     }
 
     .controlButtonSelected {
-      transform: scale(1.2, 1.2);
+      transform: scale(1, 1);
     }
   </style>
 
 </head>
-<!-- <body>
-    <canvas width="600" height="600" id='WebARRocksFaceCanvasAR'></canvas>
-    <canvas width="600" height="600" id='WebARRocksFaceCanvasVideo'></canvas>
-    <controls class='controls'>
-      <a class='controlButton controlButtonSelected' id='colorRed' onclick='change_lipstickColor([0.6902, 0.4353, 0.6], event)'></a>
-      <a class='controlButton' id='colorBlue' onclick='change_lipstickColor([0.0, 0.0, 1.0], event)'></a>
-      <a class='controlButton' id='colorYellow' onclick='change_lipstickColor([0.0, 0.0, 0.0], event)'></a>
-    </controls>
-  </body> -->
 
 <body class="white-preview">
   <canvas width="600" height="600" id='WebARRocksFaceCanvasAR'></canvas>
@@ -105,8 +96,9 @@
   <div class="btn-container">
     <!-- <i class="fa fa-sun-o" aria-hidden="true"></i> -->
     <label class="switch btn-color-mode-switch">
-      <input type="checkbox" name="color_mode" id="color_mode" value="1">
-      <label for="color_mode" data-on="Glossy" data-off="Matte" class="btn-color-mode-switch-inner"></label>
+      <!-- <input type="checkbox" name="color_mode" id="color_mode" value="1"> -->
+      <!-- <label for="color_mode" data-on="Glossy" data-off="Matte" class="btn-color-mode-switch-inner"></label> -->
+      <label for="color_mode" data-off="Matte" class="btn-color-mode-switch-inner"></label>
     </label>
     <!-- <i class="fa fa-moon-o" aria-hidden="true"></i> -->
     <!-- <p class="by"><a href="https://github.com/NadeeshaEranjan" target="_blank">Github/NadeeshaEranjan</a></p> -->
@@ -122,12 +114,35 @@
     <div id="slider" class="slider">
       <div class="wrapper">
         <div id="items" class="items">
-          <img src="EllipseNormal.png" alt="Image 1" class="slide">
-          <img src="EllipseNormal.png" alt="Image 2" class="slide">
-          <img src="EllipseNormal.png" alt="Image 3" class="slide">
-          <img src="EllipseNormal.png" alt="Image 4" class="slide">
-          <img src="EllipseNormal.png" alt="Image 5" class="slide">
-          <img src="EllipseNormal.png" alt="Image 6" class="slide">
+          <img src="Normal2.png" class="slide" id="color1">
+          <img src="Selected3.png" class="slide" id="color2">
+          <img src="Normal4.png" class="slide" id="color3">
+          <img src="Normal5.png" class="slide" id="color4">
+          <img src="Normal6.png" class="slide" id="color5">
+          <img src="Normal7.png" class="slide" id="color6">
+          <img src="Normal8.png" class="slide" id="color7">
+          <img src="Normal9.png" class="slide" id="color8">
+          <img src="Normal10.png" class="slide" id="color9">
+          <img src="Normal11.png" class="slide" id="color10">
+          <img src="Normal12.png" class="slide" id="color11">
+          <img src="Normal13.png" class="slide" id="color12">
+          <img src="Normal14.png" class="slide" id="color13">
+          <img src="Normal15.png" class="slide" id="color14">
+          <img src="Normal16.png" class="slide" id="color15">
+          <img src="Normal17.png" class="slide" id="color16">
+          <img src="Normal18.png" class="slide" id="color17">
+          <img src="Normal19.png" class="slide" id="color18">
+          <img src="Normal20.png" class="slide" id="color19">
+          <img src="Normal21.png" class="slide" id="color20">
+          <img src="Normal22.png" class="slide" id="color21">
+          <img src="Normal23.png" class="slide" id="color22">
+          <img src="Normal24.png" class="slide" id="color23">
+          <img src="Normal25.png" class="slide" id="color24">
+          <img src="Normal26.png" class="slide" id="color25">
+          <img src="Normal27.png" class="slide" id="color26">
+          <img src="Normal28.png" class="slide" id="color27">
+          <img src="Normal29.png" class="slide" id="color28">
+          <img src="Normal30.png" class="slide" id="color29">
           <!-- Add more image elements for additional slides -->
         </div>
       </div>
