@@ -209,6 +209,7 @@ const SHAPELIPS = {
   GLSLFragmentSource: "\n\
     const vec2 ALPHARANGE = vec2(0.1, 0.6);\n\
     const vec3 LUMA = 1.3 * vec3(0.299, 0.587, 0.114);\n\
+    vec3 glossyHighlightColor = vec3(1.0, 1.0, 1.0); \n\
     \n\
       float linStep(float edge0, float edge1, float x){\n\
       float val = (x - edge0) / (edge1 - edge0);\n\
@@ -227,8 +228,13 @@ const SHAPELIPS = {
       alpha *= 0.5 + 0.5 * linStep(1.0, 0.6, abs(iVal)); // exterior smoothing\n\
       float alphaClamped = ALPHARANGE.x + (ALPHARANGE.y - ALPHARANGE.x) * alpha;\n\
       \n\
-      // mix colors:\n\
-      vec3 color = videoColorGs * lipstickColor * 1.5;\n\
+      float glossiness = texture2D(glossinessMap, vUV).r;\n\
+      vec3 viewDirection = normalize(vec3(0.0, 0.0, 1.0));\n\
+      float specular = max(dot(viewDirection, normalize(videoColorGs)), 0.0);\n\
+      specular = pow(specular, 1.0 / glossiness); \n\
+      vec3 glossyColor = glossyHighlightColor * specular; \n\
+      vec3 color = videoColorGs * lipstickColor * 1.5; // Adjust saturation as needed\n\
+      color += glossyColor; \n\
       gl_FragColor = vec4(color*alphaClamped, alphaClamped);\n\
       \n\
       // DEBUG ZONE:\n\
