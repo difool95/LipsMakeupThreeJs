@@ -92,8 +92,6 @@ const WebARRocksFaceShape2DHelper = (function () {
       const img = new Image();
       img.onload = function () {
         const glTexture = _gl.createTexture();
-        console.log(imageSrc);
-        console.log(glTexture);
         _gl.bindTexture(_gl.TEXTURE_2D, glTexture);
         _gl.texParameteri(_gl.TEXTURE_2D, _gl.TEXTURE_MAG_FILTER, _gl.LINEAR);
         _gl.texParameteri(_gl.TEXTURE_2D, _gl.TEXTURE_MIN_FILTER, _gl.NEAREST_MIPMAP_LINEAR);
@@ -256,7 +254,6 @@ const WebARRocksFaceShape2DHelper = (function () {
         + GLSLUniforms.join('\n') + '\n'
         + 'varying vec2 vUV;\n'
         + 'uniform sampler2D samplerVideo;\n'
-        // + 'uniform sampler2D glossinessMap; \n\''
         + shapeSpecs.GLSLFragmentSource;
       const shp = build_shaderProgram(_gl, vertexShaderSource, fragmentShaderSource, 'SHAPE_' + shapeIndex.toString());
 
@@ -267,8 +264,6 @@ const WebARRocksFaceShape2DHelper = (function () {
       }
       shp.uniforms.samplerVideo = _gl.getUniformLocation(shp.program, "samplerVideo");
       shp.uniforms.videoUVScale = _gl.getUniformLocation(shp.program, "videoUVScale");
-      // shp.uniforms.glossinessMap = gl.getUniformLocation(shp.program, 'glossinessMap');
-
       shp.uniforms.texturesSamplers = shapeSpecs.textures.map(function (textureSpec) {
         return _gl.getUniformLocation(shp.program, textureSpec.id);
       });
@@ -850,56 +845,6 @@ const WebARRocksFaceShape2DHelper = (function () {
     set_uniformValue(shapeName, uniformName, value) {
       const shapeUniforms = _shapesByName[shapeName].uniformsByName;
       shapeUniforms[uniformName].value = value;
-    },
-
-    updateShape(newShape, shapeName) {
-      console.log(_shapesByName);
-    },
-
-    change_NN: function (spec) {
-      _spec = Object.assign({}, _defaultSpec, spec);
-      return new Promise(function (accept, reject) {
-        const initSettings = {
-          canvas: _spec.canvasVideo,
-          NNCPath: _spec.NNCPath,
-          scanSettings: {
-            'threshold': 0.7
-          },
-          callbackReady: function (err, objs) {
-            if (err) {
-              reject(err);
-              return;
-            }
-
-            _glv = objs.GL;
-            _glvVideoTexture = objs.videoTexture;
-            _videoTransformMat2 = objs.videoTransformMat2;
-
-            _videoElement = objs.video;
-            _glVideoTexture = create_glVideoTexture();
-
-            init_shps();
-            Promise.all(_spec.shapes.map(build_shape.bind(null, objs.landmarksLabels))).then(function (shapes) {
-              _shapes = shapes;
-              accept();
-            });
-          },
-
-          callbackTrack: callbackTrack
-        };
-
-        // if (domVideo) {
-        //   initSettings.videoSettings = { videoElement: domVideo };
-        // }
-
-        return WEBARROCKSFACE.update({
-          NNCPath: _spec.NNCPath
-        }).then(function () {
-          console.log("updated ");
-        });
-        // WEBARROCKSFACE.init(initSettings);
-      }); // end returned promise
-
     },
 
     get_viewWidth: function () {
