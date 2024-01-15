@@ -140,7 +140,7 @@ function slide(wrapper, items, initialPosition) {
     if (index == -2) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[0].classList.add('controlButtonSelected');
-      // change_lipstickColor([0.82352941176, 0.36862745098, 0.38431372549]);
+      change_lipstickColor([0.82352941176, 0.36862745098, 0.38431372549]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[0].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[0];
