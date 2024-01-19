@@ -430,4 +430,4 @@ function checkIndex() {
   }
   allowShift = true;
 }
-}
+
