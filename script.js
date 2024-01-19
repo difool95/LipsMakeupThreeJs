@@ -136,10 +136,13 @@ function slide(wrapper, items, initialPosition) {
     allowShift = false;
   }
 
-  function getLink() {
-    return link;
-  }
 }
+
+
+function getLink() {
+  return link;
+}
+
 function checkIndex() {
   items.classList.remove('shifting');
   var imageIndex = lastIndex + 3;
