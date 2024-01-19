@@ -26,11 +26,12 @@ var threshold = document.documentElement.clientWidth * 0.19; // Adjust as needed
 var initialPosition = -(threshold); // You can adjust this value as needed
 var link = "https://doris.tn/6192483906048-gloss%20matte%20velvet%2009.html";
 slide(slider, sliderItems, initialPosition);
-// var openLink = document.getElementById("openLink");
+var openLink = document.getElementById("openLink");
 
-// openLink.addEventListener("click", function () {
-//   window.location.href = link;
-// });
+openLink.addEventListener("click", function () {
+  window.open(link, '_blank');
+  // window.location.href = link;
+});
 
 var selectedDOMColorButton = document.getElementById('color2');
 function slide(wrapper, items, initialPosition) {
