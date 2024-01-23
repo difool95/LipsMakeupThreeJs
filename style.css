@@ -6,21 +6,20 @@ body {
   /*    background-image: url('bg.png'); */
   background-color: black;
   overflow: hidden;
-  font-family: 'Montserrat', sans-serif;
   text-align: center;
   letter-spacing: 0.15em;
+  font-family: 'Poppins-semiBold', sans-serif;
 }
 
 @font-face {
   font-family: 'Poppins-semiBold';
   /* The name you want to use for your font */
-  src: url('./fonts/Poppins-SemiBold.ttf') format('truetype');
-  /* Font in TTF format */
-  /* You can add more formats if you have them */
+  src: local('Poppins-semiBold'), url('./fonts/Poppins-SemiBold.ttf') format('truetype');
 }
 
 body {
   display: table;
+  font-family: 'Poppins-semiBold', sans-serif;
 }
 
 /*switch styles*/
@@ -71,7 +70,6 @@ label {
   position: absolute;
   font-size: 14px;
   color: #fefefe;
-  font-family: 'Poppins-semiBold';
   font-weight: 500;
   /*    top: 7px;*/
   right: 18%;
