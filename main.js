@@ -207,7 +207,7 @@ const SHAPELIPS = {
 
   // color with smooth border:
   GLSLFragmentSource: "\n\
-    const vec2 ALPHARANGE = vec2(0.1, 0.6);\n\
+    const vec2 ALPHARANGE = vec2(0.3, 0.8);\n\
     const vec3 LUMA = 1.3 * vec3(0.299, 0.587, 0.114);\n\
     \n\
       float linStep(float edge0, float edge1, float x){\n\
