@@ -226,7 +226,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 7) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.7333333333333333, 0.3686274509803922, 0.403921568627451]);
+      change_lipstickColor([0.7333333333333333, 0.3686274509803922, 0.49411764705882355]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[9].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[9];
@@ -235,7 +235,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 8) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.8431372549019608, 0.41568627450980394, 0.28627450980392155]);
+      change_lipstickColor([0.8431372549019608, 0.41568627450980394, 0.6000000000000001]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[10].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[10];
@@ -244,7 +244,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 9) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.6039215686274509, 0.396078431372549, 0.34901960784313724]);
+      change_lipstickColor([0.6078431372549019, 0.396078431372549, 0.5647058823529412]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[11].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[11];
@@ -253,7 +253,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 10) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.7058823529411765, 0.20392156862745098, 0.27058823529411763]);
+      change_lipstickColor([0.7058823529411765, 0.20392156862745098, 0.3686274509803922]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[12].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[12];
@@ -262,7 +262,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 11) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.7137254901960784, 0.16862745098039217, 0.27058823529411763]);
+      change_lipstickColor([0.7137254901960784, 0.16862745098039217, 0.32941176470588235]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[13].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[13];
@@ -271,7 +271,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 12) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.7686274509803922, 0.19607843137254902, 0.27058823529411763]);
+      change_lipstickColor([0.7686274509803922, 0.19607843137254902, 0.32941176470588235]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[14].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[14];
@@ -280,7 +280,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 13) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.7647058823529411, 0.2, 0.2]);
+      change_lipstickColor([0.7647058823529411, 0.2, 0.20784313725490197]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[15].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[15];
@@ -289,7 +289,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 14) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.5568627450980392, 0.19607843137254902, 0.1411764705882353]);
+      change_lipstickColor([0.5568627450980392, 0.19607843137254902, 0.25882352941176473]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[16].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[16];
@@ -298,7 +298,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 15) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.7254901960784313, 0.15294117647058825, 0.4549019607843137]);
+      change_lipstickColor([0.7254901960784313, 0.15294117647058825, 0.25098039215686274]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[17].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[17];
@@ -307,7 +307,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 16) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.8117647058823529, 0.30980392156862746, 0.596078431372549]);
+      change_lipstickColor([0.8117647058823529, 0.30980392156862746, 0.615686274509804]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[18].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[18];
@@ -316,7 +316,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 17) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.9607843137254902, 0.3333333333333333, 0.3333333333333333]);
+      change_lipstickColor([0.9607843137254902, 0.3333333333333333, 0.027450980392156862]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[19].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[19];
@@ -325,7 +325,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 18) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.6431372549019608, 0.396078431372549, 0.34509803921568627]);
+      change_lipstickColor([0.6431372549019608, 0.396078431372549, 0.5098039215686274]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[20].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[20];
@@ -334,7 +334,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 19) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.4549019607843137, 0.3411764705882353, 0.4588235294117647]);
+      change_lipstickColor([0.4549019607843137, 0.3411764705882353, 0.3333333333333333]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[21].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[21];
@@ -343,7 +343,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 20) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.37254901960784315, 0.21568627450980393, 0.3254901960784314]);
+      change_lipstickColor([0.37254901960784315, 0.21568627450980393, 0.20392156862745098]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[22].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[22];
@@ -352,7 +352,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 21) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.4, 0.1803921568627451, 0.13333333333333333]);
+      change_lipstickColor([0.4, 0.1803921568627451, 0.1803921568627451]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[23].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[23];
@@ -361,7 +361,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 22) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.34901960784313724, 0.20784313725490197, 0.20784313725490197]);
+      change_lipstickColor([0.34901960784313724, 0.20784313725490197, 0.18823529411764706]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[24].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[24];
@@ -370,7 +370,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 23) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.3607843137254902, 0.1607843137254902, 0.1607843137254902]);
+      change_lipstickColor([0.3607843137254902, 0.1607843137254902, 0.14901960784313725]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[25].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[25];
@@ -379,7 +379,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 24) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.3607843137254902, 0.11372549019607843, 0.13333333333333333]);
+      change_lipstickColor([0.3607843137254902, 0.11372549019607843, 0.1411764705882353]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[26].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[26];
@@ -388,7 +388,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 25) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.41568627450980394, 0.2, 0.2]);
+      change_lipstickColor([0.41568627450980394, 0.2, 0.2196078431372549]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[27].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[27];
@@ -397,7 +397,7 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 26) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.4, 0.054901960784313725, 0.2]);
+      change_lipstickColor([0.4, 0.054901960784313725, 0.20392156862745098]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[28].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[28];
@@ -406,22 +406,13 @@ function slide(wrapper, items, initialPosition) {
     else if (index == 27) {
       // selectedDOMColorButton.classList.remove('controlButtonSelected');
       // items.children[7].classList.add('controlButtonSelected');
-      change_lipstickColor([0.40784313725490196, 0.06666666666666667, 0.0784313725490196]);
+      change_lipstickColor([0.40784313725490196, 0.06666666666666667, 0.25882352941176473]);
       selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
       items.children[29].src = "Selected" + (index + 3) + ".png";
       selectedDOMColorButton = items.children[29];
       link = "https://doris.tn/gloss-matte-velvet-37-6192483907083.html";
+      shiftSlide(-1)
     }
-    // else if (index == 28) {
-    //   // selectedDOMColorButton.classList.remove('controlButtonSelected');
-    //   // items.children[7].classList.add('controlButtonSelected');
-    //   change_lipstickColor([0.81176470588, 0.39215686275, 0.39607843137]);
-    //   selectedDOMColorButton.src = "Normal" + imageIndex + ".png"
-    //   items.children[30].src = "Selected" + (index + 3) + ".png";
-    //   selectedDOMColorButton = items.children[30];
-    //   link = "https://doris.tn/6192483906048-gloss%20matte%20velvet%2009.html";
-    //   shiftSlide(-1)
-    // }
     else if (index == slidesLength) {
       items.style.left = -(1 * slideSize) + "px";
       index = 0;
@@ -433,5 +424,7 @@ function slide(wrapper, items, initialPosition) {
 function getLink() {
   return link;
 }
+
+
 
 
