@@ -275,7 +275,7 @@ const SHAPELIPS = {
 
   uniforms: [{
     name: 'lipstickColor',
-    value: [0.77254901961, 0.36470588235, 0.41960784314]
+    value: [0.803921568627451, 0.5098039215686274, 0.596078431372549]
   }]
 }; //end SHAPELIPS
 
