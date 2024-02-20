@@ -58,8 +58,9 @@ const WebARRocksFaceShape2DHelper = (function () {
     }
     var imageFace = document.getElementById('faceImage');
     // draw shapes:
+    console.log(detectState);
     if (detectState.isDetected) {
-      console.log("detectState.landmarks " + detectState.landmarks);
+      // console.log("detectState.landmarks " + detectState.landmarks);
       const landmarksStabilized = _landmarksStabilizer.update(detectState.landmarks, that.get_viewWidth(), that.get_viewHeight(), detectState.s);
       _shapes.forEach(draw_shape.bind(null, landmarksStabilized));
       // imageFace.style.display = 'none';
@@ -565,7 +566,7 @@ const WebARRocksFaceShape2DHelper = (function () {
       shape.points[2 * i + 1] = landmarksPositions[lmInd][1];
     }
     // console.log("points count " + shape.pointsCount);
-    console.log(shape);
+    // console.log(shape);
     // console.log("landmarksPositions " + landmarksPositions);
 
     // compute displacements using outlines:
@@ -573,9 +574,9 @@ const WebARRocksFaceShape2DHelper = (function () {
 
     // compute interpolated points:
     shape.interpolatedPoints.forEach(compute_interpolation.bind(null, shape.points));
-    console.log(shape.points);
-    console.log(shape.glvVBOPoints);
-    console.log(shape.shp.attributes.position);
+    // console.log(shape.points);
+    // console.log(shape.glvVBOPoints);
+    // console.log(shape.shp.attributes.position);
     // send positions to GPU;
     _gl.bindBuffer(_gl.ARRAY_BUFFER, shape.glvVBOPoints);
     _gl.bufferData(_gl.ARRAY_BUFFER, shape.points, _gl.DYNAMIC_DRAW);
