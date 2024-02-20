@@ -57,12 +57,11 @@ const WebARRocksFaceShape2DHelper = (function () {
       }
     }
     var imageFace = document.getElementById('faceImage');
-    console.log(imageFace);
     // draw shapes:
     if (detectState.isDetected) {
       const landmarksStabilized = _landmarksStabilizer.update(detectState.landmarks, that.get_viewWidth(), that.get_viewHeight(), detectState.s);
       _shapes.forEach(draw_shape.bind(null, landmarksStabilized));
-      imageFace.style.display = 'none';
+      // imageFace.style.display = 'none';
     } else {
       _landmarksStabilizer.reset();
       imageFace.style.display = 'block';
