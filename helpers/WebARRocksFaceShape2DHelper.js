@@ -101,6 +101,8 @@ const WebARRocksFaceShape2DHelper = (function () {
         _gl.bindTexture(_gl.TEXTURE_2D, null);
         _gl.pixelStorei(_gl.UNPACK_FLIP_Y_WEBGL, false);
         accept(glTexture);
+        console.log("started 4");
+
       }
       img.src = imageSrc;
     }); //end returned promise
@@ -162,6 +164,7 @@ const WebARRocksFaceShape2DHelper = (function () {
     gl.linkProgram(glShaderProgram);
     const aPos = gl.getAttribLocation(glShaderProgram, "position");
     gl.enableVertexAttribArray(aPos);
+    console.log("started 5");
 
     return {
       program: glShaderProgram,
@@ -191,7 +194,7 @@ const WebARRocksFaceShape2DHelper = (function () {
       }',
       'DRAW VIDEO');
     _shps.drawVideo.uniforms.transformMat2 = _glv.getUniformLocation(_shps.drawVideo.program, 'transform');
-    console.log("started 2");
+    // console.log("started 2");
   }
 
 
@@ -224,6 +227,7 @@ const WebARRocksFaceShape2DHelper = (function () {
         iValsShaderSources.vertexPars += 'varying ' + GLSLType + ' iVal;\n';
         iValsShaderSources.vertex = 'iVal = aiVal;\n';
         iValsShaderSources.fragmentPars += 'varying ' + GLSLType + ' iVal;\n';
+        console.log("started 3");
       }
 
       // build textures:
@@ -789,7 +793,7 @@ const WebARRocksFaceShape2DHelper = (function () {
 
           init_shps();
           Promise.all(_spec.shapes.map(build_shape.bind(null, objs.landmarksLabels))).then(function (shapes) {
-            console.log("started");
+            // console.log("started");
             _shapes = shapes;
             accept();
           });
