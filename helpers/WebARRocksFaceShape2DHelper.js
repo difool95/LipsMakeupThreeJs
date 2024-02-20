@@ -191,6 +191,7 @@ const WebARRocksFaceShape2DHelper = (function () {
       }',
       'DRAW VIDEO');
     _shps.drawVideo.uniforms.transformMat2 = _glv.getUniformLocation(_shps.drawVideo.program, 'transform');
+    console.log("started 2");
   }
 
 
@@ -788,6 +789,7 @@ const WebARRocksFaceShape2DHelper = (function () {
 
           init_shps();
           Promise.all(_spec.shapes.map(build_shape.bind(null, objs.landmarksLabels))).then(function (shapes) {
+            console.log("started");
             _shapes = shapes;
             accept();
           });
