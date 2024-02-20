@@ -56,16 +56,16 @@ const WebARRocksFaceShape2DHelper = (function () {
         update_glVideoTexture();
       }
     }
-
+    var imageFace = document.getElementById('faceImage');
+    console.log(imageFace);
     // draw shapes:
     if (detectState.isDetected) {
       const landmarksStabilized = _landmarksStabilizer.update(detectState.landmarks, that.get_viewWidth(), that.get_viewHeight(), detectState.s);
       _shapes.forEach(draw_shape.bind(null, landmarksStabilized));
-      console.log("started 7");
+      imageFace.style.display = 'none';
     } else {
       _landmarksStabilizer.reset();
-      console.log("started 8");
-
+      imageFace.style.display = 'block';
     }
 
     _gl.flush();

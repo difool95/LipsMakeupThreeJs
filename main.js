@@ -875,9 +875,7 @@ function start() {
     // ,videoURL: '../../../../testVideos/1032526922-hd.mov'
     //,videoURL: '../../../../testVideos/1057538806-hd.mp4'
   }).then(function () {
-    // console.log("started");
-    // var image = document.getElementById('faceImage');
-    // image.style.display = 'none';
+
   }).catch(function (err) {
     throw new Error(err);
   });
