@@ -148,7 +148,7 @@ const WebARRocksFaceShape2DHelper = (function () {
       console.log('Buggy shader source: \n', source);
       return null;
     }
-    console.log("started 6")
+    // console.log("started 6")
     return glShader;
   };
 
@@ -560,20 +560,22 @@ const WebARRocksFaceShape2DHelper = (function () {
     // extract positions:
     for (let i = 0; i < shape.pointsCount; ++i) {
       const lmInd = shape.mapPointIndexToNNLandmark[i];
-      console.log("lmInd " + lmInd);
+      // console.log("lmInd " + lmInd);
       shape.points[2 * i] = landmarksPositions[lmInd][0];
       shape.points[2 * i + 1] = landmarksPositions[lmInd][1];
     }
-    console.log("points count " + shape.pointsCount);
-    console.log("shape " + shape);
-    console.log("landmarksPositions " + landmarksPositions);
+    // console.log("points count " + shape.pointsCount);
+    console.log(shape);
+    // console.log("landmarksPositions " + landmarksPositions);
 
     // compute displacements using outlines:
     shape.outlines.forEach(apply_outline.bind(null, shape.points));
 
     // compute interpolated points:
     shape.interpolatedPoints.forEach(compute_interpolation.bind(null, shape.points));
-
+    console.log(shape.points);
+    console.log(shape.glvVBOPoints);
+    console.log(shape.shp.attributes.position);
     // send positions to GPU;
     _gl.bindBuffer(_gl.ARRAY_BUFFER, shape.glvVBOPoints);
     _gl.bufferData(_gl.ARRAY_BUFFER, shape.points, _gl.DYNAMIC_DRAW);
