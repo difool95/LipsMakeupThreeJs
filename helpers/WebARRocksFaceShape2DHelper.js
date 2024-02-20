@@ -59,6 +59,7 @@ const WebARRocksFaceShape2DHelper = (function () {
     var imageFace = document.getElementById('faceImage');
     // draw shapes:
     if (detectState.isDetected) {
+      console.log("detectState.landmarks " + detectState.landmarks);
       const landmarksStabilized = _landmarksStabilizer.update(detectState.landmarks, that.get_viewWidth(), that.get_viewHeight(), detectState.s);
       _shapes.forEach(draw_shape.bind(null, landmarksStabilized));
       // imageFace.style.display = 'none';
@@ -559,9 +560,13 @@ const WebARRocksFaceShape2DHelper = (function () {
     // extract positions:
     for (let i = 0; i < shape.pointsCount; ++i) {
       const lmInd = shape.mapPointIndexToNNLandmark[i];
+      console.log("lmInd " + lmInd);
       shape.points[2 * i] = landmarksPositions[lmInd][0];
       shape.points[2 * i + 1] = landmarksPositions[lmInd][1];
     }
+    console.log("points count " + shape.pointsCount);
+    console.log("shape " + shape);
+    console.log("landmarksPositions " + landmarksPositions);
 
     // compute displacements using outlines:
     shape.outlines.forEach(apply_outline.bind(null, shape.points));
