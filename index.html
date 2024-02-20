@@ -86,6 +86,14 @@
     .controlButtonSelected {
       transform: scale(1, 1);
     }
+
+    .centered-image {
+      position: absolute;
+      width: 30vh;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   </style>
 
 </head>
@@ -93,6 +101,8 @@
 <body class="white-preview">
   <canvas width="600" height="600" id='WebARRocksFaceCanvasAR'></canvas>
   <canvas width="600" height="600" id='WebARRocksFaceCanvasVideo'></canvas>
+  <img src="face.png" class="centered-image" id="faceImage">
+
   <div class="btn-container">
     <!-- <i class="fa fa-sun-o" aria-hidden="true"></i> -->
     <label class="switch btn-color-mode-switch">
