@@ -61,8 +61,11 @@ const WebARRocksFaceShape2DHelper = (function () {
     if (detectState.isDetected) {
       const landmarksStabilized = _landmarksStabilizer.update(detectState.landmarks, that.get_viewWidth(), that.get_viewHeight(), detectState.s);
       _shapes.forEach(draw_shape.bind(null, landmarksStabilized));
+      console.log("started 7");
     } else {
       _landmarksStabilizer.reset();
+      console.log("started 8");
+
     }
 
     _gl.flush();
@@ -101,7 +104,7 @@ const WebARRocksFaceShape2DHelper = (function () {
         _gl.bindTexture(_gl.TEXTURE_2D, null);
         _gl.pixelStorei(_gl.UNPACK_FLIP_Y_WEBGL, false);
         accept(glTexture);
-        console.log("started 4");
+        // console.log("started 4");
 
       }
       img.src = imageSrc;
@@ -145,6 +148,7 @@ const WebARRocksFaceShape2DHelper = (function () {
       console.log('Buggy shader source: \n', source);
       return null;
     }
+    console.log("started 6")
     return glShader;
   };
 
@@ -164,7 +168,7 @@ const WebARRocksFaceShape2DHelper = (function () {
     gl.linkProgram(glShaderProgram);
     const aPos = gl.getAttribLocation(glShaderProgram, "position");
     gl.enableVertexAttribArray(aPos);
-    console.log("started 5");
+    // console.log("started 5");
 
     return {
       program: glShaderProgram,
@@ -227,7 +231,7 @@ const WebARRocksFaceShape2DHelper = (function () {
         iValsShaderSources.vertexPars += 'varying ' + GLSLType + ' iVal;\n';
         iValsShaderSources.vertex = 'iVal = aiVal;\n';
         iValsShaderSources.fragmentPars += 'varying ' + GLSLType + ' iVal;\n';
-        console.log("started 3");
+        // console.log("started 3");
       }
 
       // build textures:
