@@ -207,7 +207,7 @@ const SHAPELIPS = {
 
   // color with smooth border:
   GLSLFragmentSource: "\n\
-    const vec2 ALPHARANGE = vec2(0.76, 0.99);\n\
+    const vec2 ALPHARANGE = vec2(0.27, 0.64);\n\
     const vec3 LUMA = 1.3 * vec3(0.299, 0.587, 0.114);\n\
     \n\
       float linStep(float edge0, float edge1, float x){\n\
@@ -228,7 +228,7 @@ const SHAPELIPS = {
       float alphaClamped = ALPHARANGE.x + (ALPHARANGE.y - ALPHARANGE.x) * alpha;\n\
       \n\
       // mix colors:\n\
-      vec3 color = videoColorGs * lipstickColor * 2.0;\n\
+      vec3 color = videoColorGs * lipstickColor * 3.0;\n\
       gl_FragColor = vec4(color*alphaClamped, alphaClamped);\n\
       \n\
       // DEBUG ZONE:\n\
