@@ -2,7 +2,7 @@ let _canvasVideo = null, _canvasAR = null;
 let _selectedDOMColorButton = null;
 
 // tweak contours coefficients - 0 -> no tweak:
-const mouthWiden = 2;
+const mouthWiden = -0.5;
 const upperLipOut = 0.01;//0.01;
 const lowerLipOut = 0.005;//0.01;
 
@@ -228,7 +228,7 @@ const SHAPELIPS = {
       float alphaClamped = ALPHARANGE.x + (ALPHARANGE.y - ALPHARANGE.x) * alpha;\n\
       \n\
       // mix colors:\n\
-      vec3 color = videoColorGs * lipstickColor * 1.7;\n\
+      vec3 color = videoColorGs * lipstickColor * 1.4;\n\
       // gl_FragColor = vec4(color*alphaClamped, alphaClamped);\n\
         gl_FragColor = vec4(color * alpha, 1.0);\n\
       \n\
