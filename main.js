@@ -228,7 +228,7 @@ const SHAPELIPS = {
       float alphaClamped = ALPHARANGE.x + (ALPHARANGE.y - ALPHARANGE.x) * alpha;\n\
       \n\
       // mix colors:\n\
-      vec3 color = videoColorGs * lipstickColor * 1.5;\n\
+      vec3 color = videoColorGs * lipstickColor * 2.0;\n\
       // gl_FragColor = vec4(color*alphaClamped, alphaClamped);\n\
         gl_FragColor = vec4(color * alpha, 1.0);\n\
       \n\
@@ -869,7 +869,7 @@ const SHAPEFACE = {
 
 function start() {
   WebARRocksFaceShape2DHelper.init({
-    NNCPath: './neuralNets/NN_LIPS_7.json',
+    NNCPath: './neuralNets/NN_LIPS_8.json',
     canvasVideo: _canvasVideo,
     canvasAR: _canvasAR,
     shapes: [SHAPELIPS]
