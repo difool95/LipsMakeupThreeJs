@@ -3,8 +3,8 @@ let _selectedDOMColorButton = null;
 
 // tweak contours coefficients - 0 -> no tweak:
 const mouthWiden = 0;
-const upperLipOut = -0.003;//0.01;
-const lowerLipOut = -0.002;//0.01;
+const upperLipOut = 0;//0.01;
+const lowerLipOut = 0;//0.01;
 
 const SHAPELIPS = {
   name: 'LIPS',
@@ -224,7 +224,7 @@ const SHAPELIPS = {
       // computer alpha:\n\
       float alpha = 1.0; // no border smoothing\n\
       alpha *= linStep(-1.0, -0.95, abs(iVal)); // interior\n\
-      alpha *= 0.5 + 0.5 * linStep(1.0, 0.9, abs(iVal)); // exterior smoothing\n\
+      alpha *= 0.5 + 0.5 * linStep(1.0, 0.8, abs(iVal)); // exterior smoothing\n\
       float alphaClamped = ALPHARANGE.x + (ALPHARANGE.y - ALPHARANGE.x) * alpha;\n\
       \n\
       // mix colors:\n\
@@ -869,7 +869,7 @@ const SHAPEFACE = {
 
 function start() {
   WebARRocksFaceShape2DHelper.init({
-    NNCPath: './neuralNets/NN_LIPS_8.json',
+    NNCPath: './neuralNets/NN_LIPS_7.json',
     canvasVideo: _canvasVideo,
     canvasAR: _canvasAR,
     shapes: [SHAPELIPS]
