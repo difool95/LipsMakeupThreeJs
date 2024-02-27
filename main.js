@@ -224,11 +224,11 @@ const SHAPELIPS = {
       // computer alpha:\n\
       float alpha = 1.0; // no border smoothing\n\
       alpha *= linStep(-1.0, -0.95, abs(iVal)); // interior\n\
-      alpha *= 0.5 + 0.5 * linStep(1.0, 0.6, abs(iVal)); // exterior smoothing\n\
+      alpha *= 0.5 + 0.5 * linStep(0.8, 0.7, abs(iVal)); // exterior smoothing\n\
       float alphaClamped = ALPHARANGE.x + (ALPHARANGE.y - ALPHARANGE.x) * alpha;\n\
       \n\
       // mix colors:\n\
-      vec3 color = videoColorGs * lipstickColor * 10.0;\n\
+      vec3 color = videoColorGs * lipstickColor * 2.5;\n\
       gl_FragColor = vec4(color*alphaClamped, alphaClamped);\n\
       \n\
       // DEBUG ZONE:\n\
