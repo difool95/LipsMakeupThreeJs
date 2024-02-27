@@ -228,7 +228,7 @@ const SHAPELIPS = {
       float alphaClamped = ALPHARANGE.x + (ALPHARANGE.y - ALPHARANGE.x) * alpha;\n\
       \n\
       // mix colors:\n\
-      vec3 color = videoColorGs * lipstickColor * 3.0;\n\
+      vec3 color = videoColorGs * lipstickColor * 10.0;\n\
       gl_FragColor = vec4(color*alphaClamped, alphaClamped);\n\
       \n\
       // DEBUG ZONE:\n\
