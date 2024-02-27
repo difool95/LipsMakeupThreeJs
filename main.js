@@ -3,7 +3,7 @@ let _selectedDOMColorButton = null;
 
 // tweak contours coefficients - 0 -> no tweak:
 const mouthWiden = 0.01;
-const upperLipOut = 0.03;//0.01;
+const upperLipOut = -0.01;//0.01;
 const lowerLipOut = 0.005;//0.01;
 
 const SHAPELIPS = {
