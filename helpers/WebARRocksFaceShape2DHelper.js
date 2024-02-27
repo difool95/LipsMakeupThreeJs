@@ -58,7 +58,7 @@ const WebARRocksFaceShape2DHelper = (function () {
     }
     var imageFace = document.getElementById('faceImage');
     // draw shapes:
-    console.log("s " + detectState.s);
+    // console.log("s " + detectState.s);
     if (detectState.isDetected && detectState.s < 0.52) {
       // console.log("detectState.landmarks " + detectState.landmarks);
       const landmarksStabilized = _landmarksStabilizer.update(detectState.landmarks, that.get_viewWidth(), that.get_viewHeight(), detectState.s);
