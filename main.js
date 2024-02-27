@@ -206,59 +206,35 @@ const SHAPELIPS = {
   }" //*/
 
   // color with smooth border:
-  // GLSLFragmentSource: "\n\
-  //   const vec2 ALPHARANGE = vec2(0.96, 0.99);\n\
-  //   const vec3 LUMA = 1.3 * vec3(0.299, 0.587, 0.114);\n\
-  //   \n\
-  //     float linStep(float edge0, float edge1, float x){\n\
-  //     float val = (x - edge0) / (edge1 - edge0);\n\
-  //     return clamp(val, 0.0, 1.0);\n\
-  //   }\n\
-  //   \n\
-  //   \n\
-  //   void main(void){\n\
-  //     // get grayscale video color:\n\
-  //     vec3 videoColor = texture2D(samplerVideo, vUV).rgb;\n\
-  //     vec3 videoColorGs = vec3(1., 1., 1.) * dot(videoColor, LUMA);\n\
-  //     \n\
-  //     // computer alpha:\n\
-  //     float alpha = 1.0; // no border smoothing\n\
-  //     alpha *= linStep(-1.0, -0.95, abs(iVal)); // interior\n\
-  //     alpha *= 0.5 + 0.5 * linStep(0.8, 0.7, abs(iVal)); // exterior smoothing\n\
-  //     float alphaClamped = ALPHARANGE.x + (ALPHARANGE.y - ALPHARANGE.x) * alpha;\n\
-  //     \n\
-  //     // mix colors:\n\
-  //     vec3 color = videoColorGs * lipstickColor * 2.5;\n\
-  //     gl_FragColor = vec4(color*alphaClamped, alphaClamped);\n\
-  //     \n\
-  //     // DEBUG ZONE:\n\
-  //     //gl_FragColor = vec4(0., alpha, 0., 1.0);\n\
-  //     //gl_FragColor = vec4(alpha, alpha, alphaClamped, 1.0);\n\
-  //     //gl_FragColor = vec4(0., 1., 0., 1.);\n\
-  //   }",
   GLSLFragmentSource: "\n\
-    const vec2 ALPHARANGE = vec2(0.96, 0.99);\n\
+    const vec2 ALPHARANGE = vec2(0.27, 0.64);\n\
     const vec3 LUMA = 1.3 * vec3(0.299, 0.587, 0.114);\n\
     \n\
-    float linStep(float edge0, float edge1, float x){\n\
-        float val = (x - edge0) / (edge1 - edge0);\n\
-        return clamp(val, 0.0, 1.0);\n\
+      float linStep(float edge0, float edge1, float x){\n\
+      float val = (x - edge0) / (edge1 - edge0);\n\
+      return clamp(val, 0.0, 1.0);\n\
     }\n\
     \n\
+    \n\
     void main(void){\n\
-        // get grayscale video color:\n\
-        vec3 videoColor = texture2D(samplerVideo, vUV).rgb;\n\
-        vec3 videoColorGs = vec3(1., 1., 1.) * dot(videoColor, LUMA);\n\
-        \n\
-        // compute alpha:\n\
-        float alpha = 1.0; // no border smoothing\n\
-        alpha *= linStep(-1.0, -0.95, abs(iVal)); // interior\n\
-        alpha *= linStep(0.7, 0.8, abs(iVal)); // exterior smoothing\n\
-        float alphaClamped = ALPHARANGE.x + (ALPHARANGE.y - ALPHARANGE.x) * alpha;\n\
-        \n\
-        // mix colors:\n\
-        vec3 color = videoColorGs * lipstickColor * 2.5;\n\
-        gl_FragColor = vec4(color * alphaClamped, alphaClamped);\n\
+      // get grayscale video color:\n\
+      vec3 videoColor = texture2D(samplerVideo, vUV).rgb;\n\
+      vec3 videoColorGs = vec3(1., 1., 1.) * dot(videoColor, LUMA);\n\
+      \n\
+      // computer alpha:\n\
+      float alpha = 1.0; // no border smoothing\n\
+      alpha *= linStep(-1.0, -0.95, abs(iVal)); // interior\n\
+      alpha *= 0.5 + 0.5 * linStep(1.0, 0.6, abs(iVal)); // exterior smoothing\n\
+      float alphaClamped = ALPHARANGE.x + (ALPHARANGE.y - ALPHARANGE.x) * alpha;\n\
+      \n\
+      // mix colors:\n\
+      vec3 color = videoColorGs * lipstickColor * 2.5;\n\
+      gl_FragColor = vec4(color*alphaClamped, alphaClamped);\n\
+      \n\
+      // DEBUG ZONE:\n\
+      //gl_FragColor = vec4(0., alpha, 0., 1.0);\n\
+      //gl_FragColor = vec4(alpha, alpha, alphaClamped, 1.0);\n\
+      //gl_FragColor = vec4(0., 1., 0., 1.);\n\
     }",
   // GLSLFragmentSource: "\n\
   //   const vec2 ALPHARANGE = vec2(0.1, 0.6);\n\
@@ -892,7 +868,7 @@ const SHAPEFACE = {
 
 function start() {
   WebARRocksFaceShape2DHelper.init({
-    NNCPath: './neuralNets/NN_LIPS_8.json',
+    NNCPath: './neuralNets/NN_LIPS_7.json',
     canvasVideo: _canvasVideo,
     canvasAR: _canvasAR,
     shapes: [SHAPELIPS]
