@@ -2,7 +2,7 @@ let _canvasVideo = null, _canvasAR = null;
 let _selectedDOMColorButton = null;
 
 // tweak contours coefficients - 0 -> no tweak:
-const mouthWiden = 6;
+const mouthWiden = 2;
 const upperLipOut = 0.01;//0.01;
 const lowerLipOut = 0.005;//0.01;
 
