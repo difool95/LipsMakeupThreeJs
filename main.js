@@ -224,7 +224,7 @@ const SHAPELIPS = {
       // computer alpha:\n\
       float alpha = 1.0; // no border smoothing\n\
       alpha *= linStep(-1.0, -0.95, abs(iVal)); // interior\n\
-      alpha *= 0.5 + 0.5 * linStep(1.0, 0.6, abs(iVal)); // exterior smoothing\n\
+      alpha *= 0.5 + 0.5 * linStep(1.0, 0.9, abs(iVal)); // exterior smoothing\n\
       float alphaClamped = ALPHARANGE.x + (ALPHARANGE.y - ALPHARANGE.x) * alpha;\n\
       \n\
       // mix colors:\n\
@@ -869,7 +869,7 @@ const SHAPEFACE = {
 
 function start() {
   WebARRocksFaceShape2DHelper.init({
-    NNCPath: './neuralNets/NN_LIPS_7.json',
+    NNCPath: './neuralNets/NN_LIPS_8.json',
     canvasVideo: _canvasVideo,
     canvasAR: _canvasAR,
     shapes: [SHAPELIPS]
