@@ -83,7 +83,7 @@ const WebARRocksFaceShape2DHelper = (function () {
     _gl = _spec.canvasAR.getContext('webgl', {
       antialias: true,
       depth: false,
-      alpha: true,
+      alpha: false,
       stencil: false
     });
     _gl.enable(_gl.BLEND);
