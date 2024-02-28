@@ -207,7 +207,7 @@ const SHAPELIPS = {
 
   // color with smooth border:
   GLSLFragmentSource: "\n\
-    const vec2 ALPHARANGE = vec2(0.99, 1.0);\n\
+    const vec2 ALPHARANGE = vec2(0.27, 0.64);\n\
     const vec3 LUMA = 1.3 * vec3(0.299, 0.587, 0.114);\n\
     \n\
       float linStep(float edge0, float edge1, float x){\n\
@@ -224,7 +224,7 @@ const SHAPELIPS = {
       // computer alpha:\n\
       float alpha = 1.0; // no border smoothing\n\
       alpha *= linStep(-1.0, -0.95, abs(iVal)); // interior\n\
-      alpha *= 0.5 + 0.5 * linStep(1.0, 0.95, abs(iVal)); // exterior smoothing\n\
+      alpha *= 0.5 + 0.5 * linStep(1.0, 0.2, abs(iVal)); // exterior smoothing\n\
       // alpha *= linStep(-1.0, -0.95, abs(iVal)); // interior\n\
       // alpha *= 0.5 + 0.5 * linStep(1.0, 0.6, abs(iVal)); // exterior smoothing\n\
       float alphaClamped = ALPHARANGE.x + (ALPHARANGE.y - ALPHARANGE.x) * alpha;\n\
