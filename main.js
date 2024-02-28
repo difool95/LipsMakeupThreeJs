@@ -4,7 +4,7 @@ let _selectedDOMColorButton = null;
 // tweak contours coefficients - 0 -> no tweak:
 const mouthWiden = 0;
 const upperLipOut = -0.005;//0.01;
-const lowerLipOut = -0.002;//0.01;
+const lowerLipOut = 0.005;//0.01;
 
 const SHAPELIPS = {
   name: 'LIPS',
@@ -223,14 +223,14 @@ const SHAPELIPS = {
       \n\
       // computer alpha:\n\
       float alpha = 1.0; // no border smoothing\n\
-      alpha *= linStep(-1.0, -0.95, abs(iVal)); // interior\n\
+      alpha *= linStep(-1.0, -0.96, abs(iVal)); // interior\n\
       alpha *= 0.5 + 0.5 * linStep(1.0, 0.95, abs(iVal)); // exterior smoothing\n\
       // alpha *= linStep(-1.0, -0.95, abs(iVal)); // interior\n\
       // alpha *= 0.5 + 0.5 * linStep(1.0, 0.6, abs(iVal)); // exterior smoothing\n\
       float alphaClamped = ALPHARANGE.x + (ALPHARANGE.y - ALPHARANGE.x) * alpha;\n\
       \n\
       // mix colors:\n\
-      vec3 color = videoColorGs * lipstickColor * 1.6;\n\
+      vec3 color = videoColorGs * lipstickColor * 1.4;\n\
       // gl_FragColor = vec4(color*alphaClamped, alphaClamped);\n\
         gl_FragColor = vec4(color * alpha, 1.0);\n\
       \n\
